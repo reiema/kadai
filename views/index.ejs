@@ -1,0 +1,26 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>top</title>
+</head>
+
+<body>
+  <h1>商品リスト</h1>
+  <ul class="product-list">
+    <% for (const product of products) { %>
+      <li class="product-name"><%= product.name %> - ¥<%= product.price %></li>
+    <% } %>
+  </ul>
+
+  <input type="text" class="input-text" placeholder="商品名を入力" />
+  <button class="send-button">カートに追加</button>
+  <button class="get-total-button">カートの合計金額を確認</butt　on>
+
+  <script src="/static/index.js" defer></script>
+</body>
+
+</html>
